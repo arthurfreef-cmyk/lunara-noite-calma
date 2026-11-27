@@ -13,7 +13,7 @@ export const site = {
  orderBump:{title:"Chá Noite Calma + Diário do Sono",price:29},
  bonuses:["Guia Ritual Noturno de 21 dias (PDF)","Áudios guiados de relaxamento"],
  bonusValue:{amount:null as number|null,isReal:false},
- legal:{company:"",cnpj:"",address:"",email:"",whatsapp:"",anvisa:""},
+ legal:{isReal:false,company:"",cnpj:"",address:"",email:"",whatsapp:"",anvisa:""},
  tracking:{metaPixelId:"",conversionsApiEndpoint:""}
 };
 export const kits:Kit[]=[
