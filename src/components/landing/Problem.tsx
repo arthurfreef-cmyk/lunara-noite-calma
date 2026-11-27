@@ -1,27 +1,25 @@
-import { Brain, BatteryLow, CalendarX } from "lucide-react";
+import { Brain, BatteryLow, Smartphone, MoonStar } from "lucide-react";
 import { Section } from "./Section";
 
 const items = [
-  { icon: Brain, title: "Mente ligada", text: "O dia acaba, mas os pensamentos continuam rodando: tarefas, telas, conversas. A cabeça não recebe o sinal de que é hora de parar." },
-  { icon: BatteryLow, title: "Corpo cansado", text: "Você está exausto, mas não consegue relaxar. Corpo e mente seguem em ritmos diferentes no fim do dia." },
-  { icon: CalendarX, title: "Rotina sem ritual", text: "Sem um momento de transição, a noite vira extensão do dia. Um ritual simples ajuda a criar o caminho para desacelerar." },
+  { icon: Brain, text: "Deito, mas a cabeça não para" },
+  { icon: BatteryLow, text: "O dia termina, mas eu continuo ligada(o)" },
+  { icon: MoonStar, text: "Estou cansada(o) e ainda assim não consigo desacelerar" },
+  { icon: Smartphone, text: "Gasto minha noite no celular" },
 ];
 
 export function Problem() {
-  return (
-    <Section eyebrow="Entenda" title="Por que sua mente não desliga à noite?">
-      <p className="mx-auto -mt-4 mb-10 max-w-2xl text-center text-muted-foreground">
-        Durante o dia, vivemos em modo alerta. À noite, muita gente simplesmente não tem um momento de pausa entre esse modo e o descanso. O resultado é a sensação de mente acelerada justamente quando você queria desligar.
-      </p>
-      <div className="grid gap-4 md:grid-cols-3">
-        {items.map(({ icon: Icon, title, text }) => (
-          <article key={title} className="rounded-2xl bg-card p-6 shadow-card">
-            <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary"><Icon className="h-6 w-6 text-lilac" aria-hidden /></span>
-            <h3 className="mb-2 text-xl">{title}</h3>
-            <p className="text-sm text-muted-foreground">{text}</p>
-          </article>
-        ))}
+  return <Section eyebrow="Você se reconhece nisso?" title="Quando o dia termina, mas a mente continua no ritmo dele">
+    <div className="grid gap-3 sm:grid-cols-2">
+      {items.map(({ icon: Icon, text }) => <article key={text} className="flex min-h-24 items-center gap-4 rounded-2xl bg-card p-5 shadow-card"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary"><Icon className="h-6 w-6 text-lilac" /></span><p className="text-[16px] font-medium">{text}</p></article>)}
+    </div>
+    <p className="mx-auto mt-8 max-w-2xl text-center text-[17px] leading-relaxed text-muted-foreground">Nem sempre é fácil sair do ritmo do dia de uma hora para outra. Criar um pequeno momento de transição pode ajudar você a sinalizar que chegou a hora de desacelerar, sem cobrança e sem complicação.</p>
+    <div className="mt-10 rounded-3xl bg-night p-6 text-night-foreground sm:p-8">
+      <h3 className="mb-5 text-center text-2xl">O ciclo da mente acelerada à noite</h3>
+      <div className="grid gap-3 sm:grid-cols-3">
+        {["Dia em alerta", "Sem transição", "Noite sem ritual"].map((s, i) => <div key={s} className="rounded-2xl border border-lilac/30 bg-white/5 p-4 text-center"><span className="mb-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-night">{i + 1}</span><p className="font-semibold">{s}</p></div>)}
       </div>
-    </Section>
-  );
+      <p className="mt-5 text-center text-sm text-night-foreground/75">O Lunara entra como um ritual de transição: 2 cápsulas, menos telas e um momento reservado para você.</p>
+    </div>
+  </Section>;
 }
