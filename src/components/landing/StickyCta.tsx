@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "@tanstack/react-router";
 import { CtaButton, scrollToOffers } from "./CtaButton";
 
 /** CTA fixo apenas no mobile: aparece depois do hero e some nas ofertas. */
 export function StickyCta() {
  const [pastHero,setPastHero]=useState(false);
  const [atOffers,setAtOffers]=useState(false);
- const navigate=useNavigate();
  useEffect(()=>{
   const hero=document.getElementById("hero"), offers=document.getElementById("ofertas");
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{
