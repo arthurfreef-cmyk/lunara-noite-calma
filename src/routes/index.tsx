@@ -5,6 +5,7 @@ import { Hero } from "@/components/landing/Hero";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { Problem } from "@/components/landing/Problem";
 import { Ingredients } from "@/components/landing/Ingredients";
+import { Comparison } from "@/components/landing/Comparison";
 import { Ritual } from "@/components/landing/Ritual";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Bonus } from "@/components/landing/Bonus";
@@ -29,5 +30,5 @@ export const Route=createFileRoute("/")({
 });
 function Index(){
  useEffect(()=>{initPixel();track("PageView");},[]);
- return <><TopBar/><Hero/><SocialProof/><main><Problem/><Ingredients/><Ritual/><Testimonials/><Bonus/><Offers/><Guarantee/><FAQ/><FinalCta/></main><Footer/><StickyCta/></>;
+ return <><TopBar/><Hero/><SocialProof/><main><Problem/><Ingredients/><Comparison/><Ritual/><Testimonials/><Bonus/><Offers/><Guarantee/><FAQ/><FinalCta/></main><Footer/><StickyCta/></>;
 }
