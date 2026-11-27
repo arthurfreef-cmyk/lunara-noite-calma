@@ -7,7 +7,7 @@ export function Hero() {
     <header id="hero" className="stars bg-night-gradient px-5 pb-12 pt-24 text-night-foreground md:pb-16 md:pt-28">
       <div className="relative mx-auto grid max-w-6xl items-center gap-7 md:grid-cols-2 md:gap-14">
         <div className="text-center md:text-left">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-lilac/40 px-3 py-1.5 text-xs tracking-widest text-lilac-soft"><Moon className="h-3.5 w-3.5 text-gold" aria-hidden /> LUNARA NOITE CALMA</p>
+          <p className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-lilac/40 px-3 py-1.5 text-xs tracking-widest text-lilac-soft md:mx-0"><Moon className="h-3.5 w-3.5 text-gold" aria-hidden /> LUNARA NOITE CALMA</p>
           <h1 className="text-[2.55rem] leading-[1.08] sm:text-5xl md:text-6xl">Sua mente desacelera. <span className="italic text-gold">Sua noite muda.</span></h1>
           <p className="mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-night-foreground/85 md:mx-0">O ritual noturno de 2 cápsulas com magnésio, L-teanina e camomila para você desligar o dia e cultivar uma rotina de descanso.</p>
           <img src={kit4} alt="Kit com 4 potes de Lunara Noite Calma" width={816} height={816} fetchPriority="high" className="mx-auto my-6 w-full max-w-[340px] rounded-3xl shadow-card md:hidden" />
