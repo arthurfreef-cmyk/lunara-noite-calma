@@ -11,6 +11,17 @@ export const site = {
  certifications:[] as {label:string;isReal:boolean}[],
  testimonials:[] as {name:string;city:string;text:string;isReal:boolean;photo?:string;video?:string}[],
  orderBump:{title:"Chá Noite Calma + Diário do Sono",price:29},
+ checkout:{
+  supportWhatsapp:"", supportEmail:"",
+  shipping:{standardPrice:19.9,freeShippingKitIds:["4","6"],carrier:"",deliveryDaysMin:null as number|null,deliveryDaysMax:null as number|null,deliveryEstimateIsReal:false},
+  payment:{gatewayProvider:"",isConnected:false,pixEnabled:false,cardEnabled:false,boletoEnabled:false,pixExpiresMinutes:null as number|null,cardInstallments:12,cardInterestText:"",boletoDueDays:null as number|null,applePayEnabled:false,googlePayEnabled:false,createPaymentEndpoint:"",orderStatusEndpoint:"",upsellEndpoint:""},
+  warrantyDays:30, warrantyIsReal:true,
+  recovery:{serverEndpoint:"",enabled:false},
+  funnel:{endpoint:"",adminEnabled:false},
+  abTest:{paymentDefault:"pix" as "pix"|"card",layout:"three-steps" as "three-steps"|"single-step",orderBumpPosition:"payment" as "payment"|"summary",buttonText:"config" as "config"|"short"},
+  upsell:{enabled:false,extraPots:2,discount:0.15,unitPrice:null as number|null},
+  analytics:{funnelEndpoint:"",conversionsApiEndpoint:""}
+ },
  bonuses:["Guia Ritual Noturno de 21 dias (PDF)","Áudios guiados de relaxamento"],
  bonusValue:{amount:null as number|null,isReal:false},
  legal:{isReal:false,company:"",cnpj:"",address:"",email:"",whatsapp:"",anvisa:""},
