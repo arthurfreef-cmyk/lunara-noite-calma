@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Lock, AlertCircle } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
 import { getKit, site, type KitId } from "@/config/site";
 import { brl } from "@/lib/format";
 import { track } from "@/lib/tracking";
@@ -34,6 +35,10 @@ export function Checkout({kitId}:{kitId:KitId|string}) {
    <form onSubmit={submit} noValidate className="grid gap-6 md:grid-cols-[1fr_380px]">
     <div className="order-2 space-y-6 md:order-1">
      <CustomerFields data={data} errors={errors} onChange={setData}/>
+     <label className="flex cursor-pointer gap-3 rounded-2xl border-2 border-dashed border-gold bg-gold/10 p-4">
+      <Checkbox checked={bump} onCheckedChange={v=>setBump(v===true)} className="mt-0.5" aria-label="Adicionar oferta complementar"/>
+      <span className="text-sm"><strong className="block">Adicionar {site.orderBump.title} por {brl(site.orderBump.price)}</strong><span className="text-muted-foreground">Uma opção complementar para acompanhar sua rotina.</span></span>
+     </label>
      <PaymentSelector value={method} onChange={setMethod} total={totals.subtotal}/>
      {checkoutNotice&&<div role="alert" className="flex gap-3 rounded-xl border border-amber-500/40 bg-amber-50 p-4 text-sm text-amber-950"><AlertCircle className="h-5 w-5 shrink-0"/><p>{checkoutNotice}</p></div>}
      <CtaButton type="submit" size="xl" className="min-h-[56px] w-full">Revisar dados do pedido · {brl(totals.total)}</CtaButton>
