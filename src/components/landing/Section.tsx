@@ -1,7 +1,7 @@
 import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-interface SectionProps extends ComponentProps<"section"> { tone?: "light" | "dark"; eyebrow?: string; title?: ReactNode }
+interface SectionProps extends Omit<ComponentProps<"section">, "title"> { tone?: "light" | "dark"; eyebrow?: string; title?: ReactNode }
 
 export function Section({ tone = "light", eyebrow, title, className, children, ...props }: SectionProps) {
   return (

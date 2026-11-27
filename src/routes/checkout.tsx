@@ -1,14 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { zodValidator, fallback } from "@tanstack/zod-adapter";
-import { z } from "zod";
 import { useEffect } from "react";
 import { Checkout } from "@/components/checkout/Checkout";
 import { initPixel } from "@/lib/tracking";
 
-const schema = z.object({ kit: fallback(z.string(), "4").default("4") });
 
 export const Route = createFileRoute("/checkout")({
-  validateSearch: zodValidator(schema),
+  validateSearch: (s: Record<string, unknown>): { kit: string } => ({ kit: typeof s["kit"] === "string" || typeof s["kit"] === "number" ? String(s["kit"]) : "4" }),
   head: () => ({
     meta: [
       { title: "Checkout seguro · Lunara Noite Calma" },
