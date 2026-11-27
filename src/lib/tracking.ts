@@ -37,5 +37,8 @@ export function track(event:MetaEvent,data:Record<string,unknown>={}):string{
  return eventID;
 }
 export function trackCustom(name:string,data:Record<string,unknown>={}):void{
- if(typeof window!=="undefined")window.fbq?.("trackCustom",name,data);
+ if(typeof window==="undefined")return;
+ window.fbq?.("trackCustom",name,data);
+ const endpoint=site.checkout.funnel.endpoint;
+ if(endpoint)void fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},keepalive:true,body:JSON.stringify({event_name:name,event_data:data,event_source_url:window.location.href,fbp:cookie("_fbp"),fbc:cookie("_fbc"),attribution:attribution()})}).catch(()=>undefined);
 }
