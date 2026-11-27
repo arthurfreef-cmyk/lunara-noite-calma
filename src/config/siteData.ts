@@ -14,9 +14,11 @@ export const site = {
  checkout:{
   supportWhatsapp:"", supportEmail:"",
   shipping:{standardPrice:19.9,freeShippingKitIds:["4","6"],carrier:"",deliveryDaysMin:null as number|null,deliveryDaysMax:null as number|null,deliveryEstimateIsReal:false},
-  payment:{gatewayProvider:"",isConnected:false,pixEnabled:false,cardEnabled:false,boletoEnabled:false,pixExpiresMinutes:null as number|null,cardInstallments:12,cardInterestText:"",boletoDueDays:null as number|null,applePayEnabled:false,googlePayEnabled:false},
+  payment:{gatewayProvider:"",isConnected:false,pixEnabled:false,cardEnabled:false,boletoEnabled:false,pixExpiresMinutes:null as number|null,cardInstallments:12,cardInterestText:"",boletoDueDays:null as number|null,applePayEnabled:false,googlePayEnabled:false,createPaymentEndpoint:"",orderStatusEndpoint:"",upsellEndpoint:""},
   warrantyDays:30, warrantyIsReal:true,
   recovery:{serverEndpoint:"",enabled:false},
+  funnel:{endpoint:"",adminEnabled:false},
+  abTest:{paymentDefault:"pix" as "pix"|"card",layout:"three-steps" as "three-steps"|"single-step",orderBumpPosition:"payment" as "payment"|"summary",buttonText:"config" as "config"|"short"},
   upsell:{enabled:false,extraPots:2,discount:0.15,unitPrice:null as number|null},
   analytics:{funnelEndpoint:"",conversionsApiEndpoint:""}
  },
