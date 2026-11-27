@@ -45,7 +45,7 @@ export function Checkout({kitId}:{kitId:KitId|string}) {
      <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground"><Lock className="h-3.5 w-3.5"/>Seus dados são usados para processar o pedido.</p>
     </div>
     <aside className="order-1 space-y-4 md:sticky md:top-6 md:order-2 md:self-start">
-     <OrderSummary kit={kit} bump={bump} onBump={setBump} totals={totals}/>
+     <OrderSummary kit={kit} bump={bump} totals={totals}/>
     </aside>
    </form>
   </div>
