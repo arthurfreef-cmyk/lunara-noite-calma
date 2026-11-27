@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { site, type Kit } from "@/config/site";
 import { brl } from "@/lib/format";
 
@@ -24,9 +23,5 @@ export function OrderSummary({kit,bump,onBump,totals}:Props){
     </dl>
    </div>}
   </div>
-  <label className="flex cursor-pointer gap-3 rounded-2xl border-2 border-dashed border-gold bg-gold/10 p-4">
-   <Checkbox checked={bump} onCheckedChange={v=>onBump(v===true)} className="mt-0.5" aria-label="Adicionar oferta complementar"/>
-   <span className="text-sm"><strong className="block">Adicionar {site.orderBump.title} por {brl(site.orderBump.price)}</strong><span className="text-muted-foreground">Uma opção complementar para acompanhar sua rotina.</span></span>
-  </label>
  </div>;
 }
