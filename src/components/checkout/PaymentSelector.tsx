@@ -32,7 +32,7 @@ export function PaymentSelector({ value, onChange, total }: Props) {
           </button>
         ))}
       </div>
-      {value === "card" && <p className="mt-3 text-xs text-muted-foreground">Os dados do cartão serão solicitados no ambiente seguro do gateway de pagamento. Cupom {site.exitCoupon.code} aplicável no cartão.</p>}
+      {value === "card" && <p className="mt-3 text-xs text-muted-foreground">Os dados do cartão serão solicitados no ambiente seguro do gateway de pagamento. A opção de pagamento será concluída após a conexão do gateway.</p>}
     </fieldset>
   );
 }
