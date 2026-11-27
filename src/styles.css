@@ -45,14 +45,14 @@
 
 :root {
   --radius: 1rem;
-  --night: oklch(0.29 0.06 262);
-  --night-soft: oklch(0.35 0.065 265);
-  --night-foreground: oklch(0.96 0.015 80);
-  --lilac: oklch(0.62 0.11 292);
-  --lilac-soft: oklch(0.9 0.04 292);
-  --cream: oklch(0.96 0.015 80);
-  --gold: oklch(0.73 0.12 85);
-  --gold-foreground: oklch(0.22 0.05 262);
+  --night: #1B2A4A;
+  --night-soft: #26385E;
+  --night-foreground: #F6F0E6;
+  --lilac: #8E7CC3;
+  --lilac-soft: #DCD4F0;
+  --cream: #F6F0E6;
+  --gold: #C9A24B;
+  --gold-foreground: #1B2A4A;
   --success: oklch(0.6 0.13 155);
 
   --background: var(--cream);
@@ -88,6 +88,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 17px;
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3 { font-family: var(--font-serif); }
