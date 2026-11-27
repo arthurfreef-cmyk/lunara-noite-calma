@@ -3,8 +3,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { site, type Kit } from "@/config/site";
 import { brl } from "@/lib/format";
 
-interface Props { kit:Kit; bump:boolean; onBump:(v:boolean)=>void; totals:{shipping:number;subtotal:number;discount:number;total:number} }
-export function OrderSummary({kit,bump,onBump,totals}:Props){
+interface Props { kit:Kit; bump:boolean; totals:{shipping:number;subtotal:number;discount:number;total:number} }
+export function OrderSummary({kit,bump,totals}:Props){
  const [expanded,setExpanded]=useState(true);
  return <div className="sticky top-2 z-20 space-y-4">
   <div className="overflow-hidden rounded-2xl bg-card shadow-card">
