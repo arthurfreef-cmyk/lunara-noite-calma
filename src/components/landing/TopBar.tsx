@@ -1,5 +1,4 @@
 import { ShieldCheck, Truck, QrCode } from "lucide-react";
-import { site } from "@/config/site";
 import { useCountdown } from "@/hooks/use-countdown";
 
 export function TopBar(){
