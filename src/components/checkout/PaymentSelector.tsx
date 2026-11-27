@@ -11,7 +11,7 @@ export function PaymentSelector({ value, onChange, total }: Props) {
   const options = [
     { id: "pix" as const, icon: QrCode, label: "Pix", hint: `7% de desconto · ${brl(total * (1 - site.pixDiscount))}` },
     { id: "card" as const, icon: CreditCard, label: "Cartão de crédito", hint: `Até ${site.installments}x de ${brl(total / site.installments)}` },
-    { id: "boleto" as const, icon: Barcode, label: "Boleto", hint: "Aprovação em até 2 dias úteis" },
+    { id: "boleto" as const, icon: Barcode, label: "Boleto", hint: "Pagamento via boleto bancário" },
   ];
   return (
     <fieldset className="rounded-2xl bg-card p-5 shadow-card">
